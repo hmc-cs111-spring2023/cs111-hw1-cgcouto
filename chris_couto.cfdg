@@ -1,0 +1,41 @@
+startshape smilingthroughthesmoke
+
+CF::Background = [hue 180 sat 0.5 b -0.5]
+CF::MinimumSize = 0.1
+
+
+shape smilingthroughthesmoke {
+
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ smoke [flip 90 alpha -1 x 5 y -5]
+ face [z 20]
+ 
+}
+
+shape smoke {
+  CIRCLE [h 0.999 210]
+  smoke [alpha 0.00005 r 9..100 x 1 s 0.9998]
+}
+
+shape face {
+  CIRCLE [x 5 y -5 hue 56 sat 1 b 0.5 size 20]
+  smile [ y -2]
+  eye [z 3 x 10 y -2 size 2]
+  eye [z 3 x 5 size 2]
+  
+}
+
+shape smile {
+  CIRCLE [hue 1 sat 1 b 0.5 size 12 x 4 y -5]
+  SQUARE [r 60 hue 56 sat 1 b 0.5 size 12 x 6 y -1.5]
+}
+
+shape eye {
+  CIRCLE [ ]
+}
